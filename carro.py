@@ -2,10 +2,12 @@ class Carro:
     lst = []
     lstmarca = []
 
-    def __init__(self, marca, valor):
+    def __init__(self, marca, valor, cor, ano):
         self.marca = marca
         self.valor = valor
-        long = f'Marca:{self.marca} Valor:{self.valor}'
+        self.cor = cor
+        self.ano = ano
+        long = f'Marca:{self.marca} Valor:{self.valor} Cor:{self.cor} Ano:{self.ano}'
         Carro.lst.append(long)
         long2 = f'Marca:{marca}'
         Carro.lstmarca.append(long2)
@@ -13,31 +15,34 @@ class Carro:
 
     @staticmethod
     def imprimir():
-        long = Carro.lst
-        if long != []:
-            print('-----------')
-            print(*long)
-            print(f'lista normal:{Carro.lst}')
-            print(len(Carro.lst))
-            print('-----------')
+        if Carro.lst != []:
+            count = 0
+            for i in Carro.lst:
+                print(f'{count + 1}º {i} ')
+                count =+ 1
         else:
-            print('N existe nenhum carro adicionado.')
+            print('Lista de Carros Vazias!')
 
     @staticmethod
     def excluir():
-        long = Carro.lst
-        if long != []:
-            print('Qual modelo deseja excluir:')
-            print(*long)
-            op = f'Marca:{input()}'
-            for i in range (len(Carro.lst)):
-                for j in Carro.lst:
-                    if j == op:
-                         print(f'{op} removido!') #erro ao excluir
-                         Carro.lst[i].remove(op)
-                         print('deu certo')
-            else:
-                print('Modelo n existe!')
-
+        if Carro.lst != []:
+            count = 0
+            for i in Carro.lstmarca:
+                print(f'{count + 1}º {i} ')
+                count =+ 1
+            op = int(input(f'Digite o numero que deseja Excluir:'))
+            op =- 1
+            j = str(Carro.lst[op])
+            print(f'{j} removido')
+            Carro.lst.remove(j)
+            if Carro.lst != []:
+                count2 = 0
+                print('Carros Sobrando:')
+                for a in Carro.lst:
+                    print(f'{count2 + 1 }º {a} ')
+                    count2 =+ 1
         else:
-            print('N existe nenhum carro adicionado.')
+            print('Lista de Carros Vazias!')
+
+
+
