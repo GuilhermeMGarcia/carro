@@ -20,4 +20,6 @@ while loop:
     if op == '3':
         Carro.excluir(self=Carro.lst)
     if op == '4':
+        print('Saindo...')
+        time.sleep(0.5)
         loop = False
