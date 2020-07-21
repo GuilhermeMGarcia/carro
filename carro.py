@@ -13,8 +13,8 @@ class Carro:
         Carro.lstmarca.append(long2)
         print(f'{self.marca} adicionado!')
 
-    @staticmethod
-    def imprimir():
+
+    def imprimir(self):
         if Carro.lst != []:
             count = 0
             for i in Carro.lst:
@@ -23,8 +23,8 @@ class Carro:
         else:
             print('Lista de Carros Vazias!')
 
-    @staticmethod
-    def excluir():
+
+    def excluir(self):
         if Carro.lst != []:
             count = 0
             for i in Carro.lstmarca:

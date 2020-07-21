@@ -16,8 +16,8 @@ while loop:
         except ValueError:
             print('Opção invalida')
     if op == '2':
-        Carro.imprimir()
+        Carro.imprimir(self=Carro.lst)
     if op == '3':
-        Carro.excluir()
+        Carro.excluir(self=Carro.lst)
     if op == '4':
         loop = False
