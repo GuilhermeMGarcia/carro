@@ -31,16 +31,23 @@ class Carro:
                 print(f'{count + 1}º {i} ')
                 count =+ 1
             op = int(input(f'Digite o numero que deseja Excluir:'))
-            op =- 1
-            j = str(Carro.lst[op])
-            print(f'{j} removido')
-            Carro.lst.remove(j)
-            if Carro.lst != []:
-                count2 = 0
-                print('Carros Sobrando:')
-                for a in Carro.lst:
-                    print(f'{count2 + 1 }º {a} ')
-                    count2 =+ 1
+            op2 = op
+            op -= 1
+            a = len(Carro.lst)
+            if op2 <= 0 or op2 > a:
+                print('Opção invalida')
+            else:
+                j = str(Carro.lst[op])
+                print(f'{j} removido')
+                Carro.lst.remove(j)
+                j1 = str(Carro.lstmarca[op])
+                Carro.lstmarca.remove(j1)
+                if Carro.lst != []:
+                    count2 = 0
+                    print('Carros Sobrando:')
+                    for a in Carro.lst:
+                        print(f'{count2 + 1 }º {a} ')
+                        count2 += 1
         else:
             print('Lista de Carros Vazias!')
 
