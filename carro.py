@@ -18,11 +18,36 @@ class Carro():
 
 
     def imprimir(self):
-        if Carro.lst != []:
+        if Carro.lstmarca != []:
             count = 0
-            for i in Carro.lst:
+            for i in Carro.lstmarca:
                 print(f'{count + 1}º {i} ')
                 count =+ 1
+            loop = True
+            while loop:
+                op = int(input('Digite o numero do carro para mais detalhes:'))
+                op2 = op
+                op -= 1
+                a = len(Carro.lst)
+                if op2 <= 0 or op2 > a:
+                    print('Opção invalida')
+                else:
+                    print(Carro.lst[op])
+                if a == 1:
+                    loop = False
+                if a > 1:
+                    loop2 = input('Deseja ver ou carro s/n:').upper()
+                    if loop2 == 'S':
+                        continue
+                    elif loop2 == 'N':
+                        loop = False
+                        print('Saindo...')
+                        sleep(0.5)
+                        break
+                else:
+                    continue
+
+
         else:
             print('Lista de Carros Vazias! Saindo...')
             sleep(0.5)
@@ -54,9 +79,9 @@ class Carro():
                             print(f'{count2 + 1 }º {a} ')
                             count2 += 1
                 loop2 = input('Excluir mais:s/n:').upper()
-                if loop2 == 's':
+                if loop2 == 'S':
                     continue
-                elif loop2 == 'n':
+                elif loop2 == 'N':
                     break
 
             else:
