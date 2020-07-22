@@ -1,6 +1,6 @@
-import funcloop
+import funcgerente
 
-funcloop.Funcloop.terminal()
+funcgerente.Funcgerente.terminal()
 
 
 

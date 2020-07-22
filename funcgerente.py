@@ -2,7 +2,7 @@ from carro import Carro
 import time
 
 
-class Funcloop:
+class Funcgerente:
 
 
     @staticmethod
