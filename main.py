@@ -1,6 +1,6 @@
-import funcgerente
+from inicio import Inicio
 
-funcgerente.Funcgerente.terminal()
+Inicio.inic()
 
 
 
