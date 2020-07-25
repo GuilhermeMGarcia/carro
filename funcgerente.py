@@ -1,12 +1,14 @@
 from carro import Carro
 import time
-
+from gerente import Gerente
 
 class Funcgerente:
 
 
     @staticmethod
     def terminal():
+        print(f'Seja bem vindo {Gerente.lst_nome[0]}!')
+        time.sleep(0.2)
         print('Carregando...')
         time.sleep(0.5)
         print('Bem Vindo a concecionaria de carros')

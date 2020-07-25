@@ -10,7 +10,7 @@ class Login:
         if Gerente.lst_login == []:
             op = input('Ainda não existe registro cadastrar s/n:')
             if op == 's':
-                Gerente(input('Digite nome de usuario:'), input('Digite a senha:'))
+                Gerente(input('Digite nome de usuario:'), input('Digite a senha:'), input('Digite seu nome:'))
             else:
                 print('Valtando ao inicio...')
                 time.sleep(0.5)
